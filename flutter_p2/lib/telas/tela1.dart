@@ -29,7 +29,7 @@ class Tela1 extends StatelessWidget {
                     style: new TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 50.0,
-
+                      fontFamily: "Pokemon",
                     )
                 ),
                 )

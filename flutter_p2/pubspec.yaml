@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   flutter:
+
     sdk: flutter
 
 
@@ -60,7 +61,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Pokemon
+      fonts:
+        - asset: assets/PokemonSolid.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
