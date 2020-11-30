@@ -8,6 +8,8 @@ class Tela2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-    )
+    );
   }
+
+
 }
