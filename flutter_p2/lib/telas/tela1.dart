@@ -8,7 +8,13 @@ class Tela1 extends StatelessWidget {
         resizeToAvoidBottomInset: false, // set it to false
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Poke Guesser'),
+          title: const Text(
+            'Poke Guesser',
+            style: TextStyle(
+              fontFamily: "Pokemon",
+              color: Colors.black,
+            ),
+          ),
         ),
         resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
@@ -24,17 +30,16 @@ class Tela1 extends StatelessWidget {
                 bottom: 180.0,
                 height: 80,
                 width: 300,
-                child: ElevatedButton(onPressed: null, child:
-                Text('START',
-                    style: new TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 50.0,
-                      fontFamily: "Pokemon",
-                    )
-                ),
-                )
-            ),
-
+                child: ElevatedButton(
+                  onPressed: Tela2(),
+                  child: Text('START',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 50.0,
+                        fontFamily: "Pokemon",
+                        color: Colors.black,
+                      )),
+                )),
             new Positioned(
                 left: 60.0,
                 bottom: 70.0,

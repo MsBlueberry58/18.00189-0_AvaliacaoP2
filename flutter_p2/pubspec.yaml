@@ -65,6 +65,7 @@ flutter:
     - family: Pokemon
       fonts:
         - asset: assets/PokemonSolid.ttf
+        - asset: assets/PokemonHollow.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
