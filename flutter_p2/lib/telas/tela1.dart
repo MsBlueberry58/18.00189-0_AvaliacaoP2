@@ -6,7 +6,8 @@ class Tela1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, // set it to false
+        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomPadding: false,  // set it to false
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
@@ -17,7 +18,7 @@ class Tela1 extends StatelessWidget {
           ),
         ),
       ),
-      resizeToAvoidBottomPadding: false,
+
       body: SingleChildScrollView(
           child: Stack(
             children: [

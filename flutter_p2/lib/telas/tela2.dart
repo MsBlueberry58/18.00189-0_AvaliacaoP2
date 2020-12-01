@@ -5,7 +5,8 @@ class Tela2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false, // set it to false
+        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomPadding: false, // set it to false
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
@@ -16,63 +17,94 @@ class Tela2 extends StatelessWidget {
             ),
           ),
         ),
-        resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
-          child: Column(children: [
+          child: Stack(children: [
             Image.network(
-              "https://static.quizur.com/i/b/57c1c26fc0b812.5998420157c1c26fb156c9.51498011.png",
+              "https://www.teahub.io/photos/full/68-682392_28-04-2018-pokemon-sun-and-moon-wallpaper.jpg",
               fit: BoxFit.cover,
               alignment: Alignment.center,
             ),
 
+            Positioned(
+              child: Image.network(
+                "https://static.quizur.com/i/b/57c1c26fc0b812.5998420157c1c26fb156c9.51498011.png",
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+              ),
+            ),
+
             //PRIMEIRO BOTAO
-            ElevatedButton(
-              onPressed: null,
-              child: Text(
-                "Pokémon 1",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
-                  color: Colors.black,
+            Positioned(
+              left: 40.0,
+              bottom: 330.0,
+              height: 60,
+              width: 330,
+              child: ElevatedButton(
+                onPressed: null,
+                child: Text(
+                  "Pokémon 1",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35.0,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
 
             // SEGUNDO BOTAO
-            ElevatedButton(
-              onPressed: null,
-              child: Text(
-                "Pokémon 1",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
-                  color: Colors.black,
+            Positioned(
+              left: 40.0,
+              bottom: 230.0,
+              height: 60,
+              width: 330,
+              child: ElevatedButton(
+                onPressed: null,
+                child: Text(
+                  "Pokémon 2",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35.0,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
 
             // TERCEIRO BOTAO
-            ElevatedButton(
-              onPressed: null,
-              child: Text(
-                "Pokémon 1",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
-                  color: Colors.black,
+            Positioned(
+              left: 40.0,
+              bottom: 130.0,
+              height: 60,
+              width: 330,
+              child: ElevatedButton(
+                onPressed: null,
+                child: Text(
+                  "Pokémon 3",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35.0,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
 
             // QUARTO BOTAO
-            ElevatedButton(
-              onPressed: null,
-              child: Text(
-                "Pokémon 1",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
-                  color: Colors.black,
+            Positioned(
+              left: 40.0,
+              bottom: 30.0,
+              height: 60,
+              width: 330,
+              child: ElevatedButton(
+                onPressed: null,
+                child: Text(
+                  "Pokémon 4",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35.0,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
