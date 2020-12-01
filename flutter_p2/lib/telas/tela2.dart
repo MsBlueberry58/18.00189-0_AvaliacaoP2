@@ -56,7 +56,7 @@ class Tela2 extends StatelessWidget {
             shape: new RoundedRectangleBorder(
               borderRadius: new BorderRadius.circular(20.0),
             ),
-            color: _HasBeenPressed? Colors.greenAccent : Colors.amberAccent,
+
             child:
             Text(
                 "",
