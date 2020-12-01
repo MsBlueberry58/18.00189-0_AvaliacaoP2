@@ -3,14 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_p2/models/pokemon.dart';
 import 'package:flutter_p2/utilities/network_helper.dart';
 
-class Tela2 extends StatelessWidget {
+class Tela2 extends StatefulWidget {
+
 
   final Pokemon_Obj poke ;
 
   const Tela2({Key key, @required this.poke}) : super(key: key);
 
   @override
+  _Tela2State createState() => _Tela2State();
+}
+
+class _Tela2State extends State<Tela2> {
+
+  bool hasbeenPressed = false;
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
 
         resizeToAvoidBottomInset: false,
@@ -47,7 +57,7 @@ class Tela2 extends StatelessWidget {
 
             Positioned(
               child: Image.network(
-                poke.sprites.frontDefault,
+                widget.poke.sprites.frontDefault,
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
               ),
@@ -63,10 +73,10 @@ class Tela2 extends StatelessWidget {
             shape: new RoundedRectangleBorder(
               borderRadius: new BorderRadius.circular(20.0),
             ),
-
+            color: hasbeenPressed? Colors.greenAccent : Colors.amberAccent,
             child:
             Text(
-                poke.name,
+                widget.poke.name,
                 style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 35.0,
@@ -74,7 +84,9 @@ class Tela2 extends StatelessWidget {
               ),
             ),
             onPressed: () {
-
+            setState(() {
+              hasbeenPressed = !hasbeenPressed;
+            });
             },
 
           ),
