@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_p2/models/pokemon.dart';
+import 'package:flutter_p2/utilities/network_helper.dart';
 
 class Tela2 extends StatelessWidget {
   bool _HasBeenPressed = false;
@@ -52,7 +53,7 @@ class Tela2 extends StatelessWidget {
             color: _HasBeenPressed? Colors.greenAccent : Colors.amberAccent,
             child:
             Text(
-              "Pokémon 1",
+              var requisicao = network,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 35.0,
