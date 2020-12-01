@@ -1,9 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_p2/models/pokemon.dart';
 import 'package:flutter_p2/telas/tela2.dart';
+import 'package:flutter_p2/utilities/network_helper.dart';
+import 'dart:math';
 
 class Tela1 extends StatelessWidget {
+
+  Random random = new Random();
+  Pokemon_Obj poke_t = new Pokemon_Obj();
+
+  //int randomNumber = random.nextInt(100);
+
+  Future FetchPoke()  async {
+    var requisicao =
+        NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/1/");
+     poke_t = Pokemon_Obj.fromJson(await requisicao.getData());
+    //Image.network(await pokemon_nome.sprites);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +49,11 @@ class Tela1 extends StatelessWidget {
                 height: 80,
                 width: 300,
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    await FetchPoke();
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Tela2()),
+                      MaterialPageRoute(builder: (context) => Tela2(poke: poke_t)),
                     );
                   },
                   child: Text('START',
@@ -53,7 +70,7 @@ class Tela1 extends StatelessWidget {
                 height: 80,
                 width: 300,
                 child: new ElevatedButton(
-                    onPressed: (){
+                    onPressed: () {
                       SystemNavigator.pop();
                     },
                     child: Text('EXIT',

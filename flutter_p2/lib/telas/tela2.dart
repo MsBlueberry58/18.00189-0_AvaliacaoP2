@@ -4,13 +4,19 @@ import 'package:flutter_p2/models/pokemon.dart';
 import 'package:flutter_p2/utilities/network_helper.dart';
 
 class Tela2 extends StatelessWidget {
-  bool _HasBeenPressed = false;
+
+  final Pokemon_Obj poke ;
+
+  const Tela2({Key key, @required this.poke}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         resizeToAvoidBottomInset: false,
         resizeToAvoidBottomPadding: false, // set it to false
+
+
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
@@ -53,8 +59,8 @@ class Tela2 extends StatelessWidget {
             color: _HasBeenPressed? Colors.greenAccent : Colors.amberAccent,
             child:
             Text(
-              var requisicao = network,
-              style: TextStyle(
+                "",
+                style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 35.0,
                 color: Colors.black,
