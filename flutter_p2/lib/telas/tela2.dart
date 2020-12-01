@@ -10,8 +10,11 @@ import 'package:flutter_p2/utilities/network_helper.dart';
 
 class Tela2 extends StatefulWidget {
   final Pokemon_Obj poke;
+  final Pokemon_Obj poke1;
+  final Pokemon_Obj poke2;
+  final Pokemon_Obj poke3;
 
-  const Tela2({Key key, @required this.poke}) : super(key: key);
+  const Tela2({Key key, @required this.poke,  @required this.poke1,  @required this.poke2,  @required this.poke3,}) : super(key: key);
 
   @override
   _Tela2State createState() => _Tela2State();
@@ -19,31 +22,12 @@ class Tela2 extends StatefulWidget {
 
 }
 
-/*PokeLista() async{
-
-  List<Pokemon_Obj> lista = new List<Pokemon_Obj>();
-  Random random = new Random();
-
-  var requisicao = NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
-  var poke1 = Pokemon_Obj.fromJson(await requisicao.getData());
-  var requisicao2 = NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
-  var poke2 = Pokemon_Obj.fromJson(await requisicao2.getData());
-  var requisicao3 = NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
-  var poke3 = Pokemon_Obj.fromJson(await requisicao3.getData());
-
-  lista.add(poke1);
-  lista.add(poke2);
-  lista.add(poke3);
-
-  return lista;
-}
-*/
 
 
 class _Tela2State extends State<Tela2> {
 
   bool hasbeenPressed = false;
-  //List lista_rand = PokeLista();
+
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +126,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "lista_rand[0].name",
+                  widget.poke1.name,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
@@ -173,7 +157,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "lista_rand[1].name",
+                  widget.poke2.name,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
@@ -204,7 +188,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "lista_rand[2].name",
+                  widget.poke3.name,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,

@@ -10,12 +10,24 @@ class Tela1 extends StatelessWidget {
 
   Random random = new Random();
   Pokemon_Obj poke_t = new Pokemon_Obj();
+  Pokemon_Obj poke_1 = new Pokemon_Obj();
+  Pokemon_Obj poke_2 = new Pokemon_Obj();
+  Pokemon_Obj poke_3 = new Pokemon_Obj();
 
 
   Future FetchPoke()  async {
     var requisicao =
         NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
      poke_t = Pokemon_Obj.fromJson(await requisicao.getData());
+    var requisicao2 =
+    NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
+    poke_1 = Pokemon_Obj.fromJson(await requisicao2.getData());
+    var requisicao3 =
+    NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
+    poke_2 = Pokemon_Obj.fromJson(await requisicao3.getData());
+    var requisicao4 =
+    NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
+    poke_3 = Pokemon_Obj.fromJson(await requisicao4.getData());
 
   }
 
@@ -52,7 +64,7 @@ class Tela1 extends StatelessWidget {
                     await FetchPoke();
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Tela2(poke: poke_t)),
+                      MaterialPageRoute(builder: (context) => Tela2(poke: poke_t, poke1: poke_1, poke2: poke_2, poke3: poke_3)),
                     );
                   },
                   child: Text('START',
