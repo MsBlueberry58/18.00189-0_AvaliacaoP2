@@ -6,6 +6,7 @@ import 'package:flutter_p2/models/pokemon.dart';
 import 'package:flutter_p2/utilities/network_helper.dart';
 
 class Tela2 extends StatefulWidget {
+
   final Pokemon_Obj poke;
 
   const Tela2({Key key, @required this.poke}) : super(key: key);
@@ -15,8 +16,18 @@ class Tela2 extends StatefulWidget {
 }
 
 
-
 class _Tela2State extends State<Tela2> {
+
+  Random random = new Random();
+
+  //ListaPoke(){
+    //var Pokemon_Obj poke_rand;
+
+    //int id_random =
+
+    //return id_random;
+  //}
+
   bool hasbeenPressed = false;
 
   @override
@@ -52,7 +63,7 @@ class _Tela2State extends State<Tela2> {
             ),
 
             Positioned(
-              left: 30.0,
+              left: 20.0,
               top: 120.0,
               child: Image.network(
                 widget.poke.sprites.frontDefault,
@@ -105,7 +116,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "poke_erro.name",
+                  "poke_erro",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
