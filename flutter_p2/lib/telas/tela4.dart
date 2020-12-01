@@ -20,14 +20,23 @@ class Tela4 extends StatelessWidget {
         body: SingleChildScrollView(
             child: Stack(children: [
               Image.network(
-                "https://i.imgur.com/i6v5dEg.png",
+                "https://wallpapercave.com/wp/wp2431828.jpg",
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
               ),
               Positioned(
-                  bottom: 330,
-                  left: 60,
-                  child: Text('Tente novamente...',
+                  top: 120,
+                  left: 100,
+                  child: Text('Tente',
+                      style: TextStyle(
+                        fontSize: 70.0,
+                        fontFamily: "Pokemon",
+                        color: Colors.black,
+                      ))),
+              Positioned(
+                  bottom: 80,
+                  left: 20,
+                  child: Text('novamente',
                       style: TextStyle(
                         fontSize: 70.0,
                         fontFamily: "Pokemon",

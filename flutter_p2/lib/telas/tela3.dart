@@ -25,7 +25,7 @@ class Tela3 extends StatelessWidget {
             alignment: Alignment.center,
           ),
           Positioned(
-            bottom: 330,
+            bottom: 370,
               left: 60,
               child: Text('Parabéns!',
                   style: TextStyle(

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_p2/models/pokemon.dart';
 import 'package:flutter_p2/telas/tela1.dart';
 import 'package:flutter_p2/telas/tela3.dart';
+import 'package:flutter_p2/telas/tela4.dart';
 import 'package:flutter_p2/utilities/network_helper.dart';
 
 class Tela2 extends StatefulWidget {
@@ -113,6 +114,10 @@ class _Tela2State extends State<Tela2> {
                   borderRadius: new BorderRadius.circular(20.0),
                 ),
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tela4()),
+                  );
                   setState(() {
                     hasbeenPressed = !hasbeenPressed;
                   });
@@ -140,6 +145,10 @@ class _Tela2State extends State<Tela2> {
                   borderRadius: new BorderRadius.circular(20.0),
                 ),
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tela3()),
+                  );
                   setState(() {
                     hasbeenPressed = !hasbeenPressed;
                   });
@@ -167,6 +176,10 @@ class _Tela2State extends State<Tela2> {
                   borderRadius: new BorderRadius.circular(20.0),
                 ),
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tela3()),
+                  );
                   setState(() {
                     hasbeenPressed = !hasbeenPressed;
                   });
