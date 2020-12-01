@@ -45,6 +45,13 @@ class Tela2 extends StatelessWidget {
           ),
 
 
+            Positioned(
+              child: Image.network(
+                poke.sprites.frontDefault,
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+              ),
+            ),
 
         //PRIMEIRO BOTAO
         Positioned(
@@ -59,7 +66,7 @@ class Tela2 extends StatelessWidget {
 
             child:
             Text(
-                "",
+                poke.name,
                 style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 35.0,
@@ -67,7 +74,7 @@ class Tela2 extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              _HasBeenPressed = true;
+
             },
 
           ),
