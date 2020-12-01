@@ -5,7 +5,6 @@ import 'package:flutter_p2/models/pokemon.dart';
 class Tela2 extends StatelessWidget {
   bool _HasBeenPressed = false;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +49,7 @@ class Tela2 extends StatelessWidget {
             shape: new RoundedRectangleBorder(
               borderRadius: new BorderRadius.circular(20.0),
             ),
-            color: Colors.amberAccent,
+            color: _HasBeenPressed? Colors.greenAccent : Colors.amberAccent,
             child:
             Text(
               "Pokémon 1",
@@ -61,7 +60,7 @@ class Tela2 extends StatelessWidget {
               ),
             ),
             onPressed: () {
-
+              _HasBeenPressed = true;
             },
 
           ),
