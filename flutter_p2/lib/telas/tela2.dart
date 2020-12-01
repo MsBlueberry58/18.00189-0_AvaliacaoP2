@@ -22,6 +22,7 @@ class Tela2 extends StatelessWidget {
           ),
         ),
         body: SingleChildScrollView(
+
           child: Stack(children: [
             Image.network(
             "https://www.teahub.io/photos/full/68-682392_28-04-2018-pokemon-sun-and-moon-wallpaper.jpg",
@@ -37,14 +38,6 @@ class Tela2 extends StatelessWidget {
             ),
           ),
 
-          // SPRITES
-          //Positioned(
-              //top: 0.0,
-              //child:
-              //final pokemon = Pokemon.fromJSON(),
-
-
-        //),
 
 
         //PRIMEIRO BOTAO
@@ -68,9 +61,7 @@ class Tela2 extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              ButtonStyle(
-                backgroundColor: Colors.green,
-              );
+
             },
 
           ),
