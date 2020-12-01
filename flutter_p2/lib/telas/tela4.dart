@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_p2/telas/tela1.dart';
+import 'package:flutter_p2/telas/tela2.dart';
+import 'package:flutter_p2/telas/tela3.dart';
 
 class Tela4 extends StatelessWidget {
   @override
