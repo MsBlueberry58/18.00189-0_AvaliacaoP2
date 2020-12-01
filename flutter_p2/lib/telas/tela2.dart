@@ -106,6 +106,7 @@ class Tela2 extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+
               ),
             ),
           ]),
