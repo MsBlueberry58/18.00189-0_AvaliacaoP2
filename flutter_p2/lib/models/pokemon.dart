@@ -1,40 +1,66 @@
-class Pokemon {
-  List<Abilities> abilities;
-  int baseExperience;
-  List<Forms> forms;
-  List<GameIndices> gameIndices;
-  int height;
-  List<HeldItems> heldItems;
-  int id;
-  bool isDefault;
-  String locationAreaEncounters;
-  List<Moves> moves;
-  String name;
-  int order;
-  Ability species;
-  Sprites sprites;
-  List<Stats> stats;
-  List<Types> types;
-  int weight;
 
-  Pokemon(
-      {this.abilities,
-        this.baseExperience,
-        this.forms,
-        this.gameIndices,
-        this.height,
-        this.heldItems,
-        this.id,
-        this.isDefault,
-        this.locationAreaEncounters,
-        this.moves,
-        this.name,
-        this.order,
-        this.species,
-        this.sprites,
-        this.stats,
-        this.types,
-        this.weight});
+
+
+class Pokemon {
+  List<Abilities> _abilities;
+  int _baseExperience;
+  List<Forms> _forms;
+  List<GameIndices> _gameIndices;
+  int _height;
+  List<HeldItems> _heldItems;
+  int _id;
+  bool _isDefault;
+  String _locationAreaEncounters;
+  List<Moves> _moves;
+  String _name;
+  int _order;
+  Ability _species;
+  Sprites _sprites;
+  List<Stats> _stats;
+  List<Types> _types;
+  int _weight;
+
+
+
+  Pokemon({
+    List<Abilities> abilities,
+    int baseExperience,
+    List<Forms> forms,
+    List<GameIndices> gameIndices,
+    int height,
+    List<HeldItems> heldItems,
+    int id,
+    bool isDefault,
+    String locationAreaEncounters,
+    List<Moves> moves,
+    String name,
+    int order,
+    Ability species,
+    Sprites sprites,
+    List<Stats> stats,
+    List<Types> types,
+    int weight,
+})
+      {
+        this._abilities = abilities;
+        this._baseExperience = baseExperience;
+        this._forms = forms;
+        this._gameIndices = gameIndices;
+        this._height = height;
+        this._heldItems = heldItems;
+        this._id = id;
+        this._isDefault = isDefault;
+        this._locationAreaEncounters = locationAreaEncounters;
+        this._moves = moves;
+        this._name = name;
+        this._order = order;
+        this._species = species;
+        this._sprites = sprites;
+        this._stats = stats;
+        this._types = types;
+        this._weight = weight;}
+
+  List<Abilities> get abilities => _abilities;
 
   Pokemon.fromJson(Map<String, dynamic> json) {
     if (json['abilities'] != null) {
@@ -131,6 +157,106 @@ class Pokemon {
     }
     data['weight'] = this.weight;
     return data;
+  }
+
+  int get baseExperience => _baseExperience;
+
+  int get weight => _weight;
+
+  List<Types> get types => _types;
+
+  List<Stats> get stats => _stats;
+
+  Sprites get sprites => _sprites;
+
+  Ability get species => _species;
+
+  int get order => _order;
+
+  String get name => _name;
+
+  List<Moves> get moves => _moves;
+
+  String get locationAreaEncounters => _locationAreaEncounters;
+
+  bool get isDefault => _isDefault;
+
+  int get id => _id;
+
+  List<HeldItems> get heldItems => _heldItems;
+
+  int get height => _height;
+
+  List<GameIndices> get gameIndices => _gameIndices;
+
+  List<Forms> get forms => _forms;
+
+  set weight(int value) {
+    _weight = value;
+  }
+
+  set types(List<Types> value) {
+    _types = value;
+  }
+
+  set stats(List<Stats> value) {
+    _stats = value;
+  }
+
+  set sprites(Sprites value) {
+    _sprites = value;
+  }
+
+  set species(Ability value) {
+    _species = value;
+  }
+
+  set order(int value) {
+    _order = value;
+  }
+
+  set name(String value) {
+    _name = value;
+  }
+
+  set moves(List<Moves> value) {
+    _moves = value;
+  }
+
+  set locationAreaEncounters(String value) {
+    _locationAreaEncounters = value;
+  }
+
+  set isDefault(bool value) {
+    _isDefault = value;
+  }
+
+  set id(int value) {
+    _id = value;
+  }
+
+  set heldItems(List<HeldItems> value) {
+    _heldItems = value;
+  }
+
+  set height(int value) {
+    _height = value;
+  }
+
+  set gameIndices(List<GameIndices> value) {
+    _gameIndices = value;
+  }
+
+  set forms(List<Forms> value) {
+    _forms = value;
+  }
+
+  set baseExperience(int value) {
+    _baseExperience = value;
+  }
+
+  set abilities(List<Abilities> value) {
+    _abilities = value;
   }
 }
 

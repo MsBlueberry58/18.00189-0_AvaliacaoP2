@@ -33,6 +33,14 @@ class Tela2 extends StatelessWidget {
               ),
             ),
 
+            Positioned(
+              top: 0.0,
+              child:
+              var pokemon = Pokemon.getName,
+
+              ),
+
+
             //PRIMEIRO BOTAO
             Positioned(
               left: 40.0,
@@ -49,6 +57,7 @@ class Tela2 extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+
               ),
             ),
 
