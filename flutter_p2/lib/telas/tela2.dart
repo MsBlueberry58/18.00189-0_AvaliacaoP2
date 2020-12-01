@@ -19,12 +19,31 @@ class Tela2 extends StatefulWidget {
 
 }
 
+/*PokeLista() async{
+
+  List<Pokemon_Obj> lista = new List<Pokemon_Obj>();
+  Random random = new Random();
+
+  var requisicao = NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
+  var poke1 = Pokemon_Obj.fromJson(await requisicao.getData());
+  var requisicao2 = NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
+  var poke2 = Pokemon_Obj.fromJson(await requisicao2.getData());
+  var requisicao3 = NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
+  var poke3 = Pokemon_Obj.fromJson(await requisicao3.getData());
+
+  lista.add(poke1);
+  lista.add(poke2);
+  lista.add(poke3);
+
+  return lista;
+}
+*/
 
 
 class _Tela2State extends State<Tela2> {
 
   bool hasbeenPressed = false;
-
+  //List lista_rand = PokeLista();
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +166,7 @@ class _Tela2State extends State<Tela2> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Tela3()),
+                    MaterialPageRoute(builder: (context) => Tela4()),
                   );
                   setState(() {
                     hasbeenPressed = !hasbeenPressed;
@@ -178,7 +197,7 @@ class _Tela2State extends State<Tela2> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Tela3()),
+                    MaterialPageRoute(builder: (context) => Tela4()),
                   );
                   setState(() {
                     hasbeenPressed = !hasbeenPressed;

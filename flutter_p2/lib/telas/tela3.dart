@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_p2/telas/tela1.dart';
 
 class Tela3 extends StatelessWidget {
   @override
@@ -33,6 +34,28 @@ class Tela3 extends StatelessWidget {
                     fontFamily: "Pokemon",
                     color: Colors.black,
                   ))),
+              Positioned(
+                bottom: 30,
+                left: 30,
+                child:RaisedButton(
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(20.0),
+                  ),
+                  child: Text(
+                    "Back to Title Screen",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Tela1()),
+                    );
+                  },
+                ),)
         ])));
   }
 }
