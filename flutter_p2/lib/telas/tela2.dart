@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_p2/models/pokemon.dart';
 
 class Tela2 extends StatelessWidget {
+  bool _HasBeenPressed = false;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,105 +24,134 @@ class Tela2 extends StatelessWidget {
         body: SingleChildScrollView(
           child: Stack(children: [
             Image.network(
-              "https://www.teahub.io/photos/full/68-682392_28-04-2018-pokemon-sun-and-moon-wallpaper.jpg",
+            "https://www.teahub.io/photos/full/68-682392_28-04-2018-pokemon-sun-and-moon-wallpaper.jpg",
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+          ),
+
+          Positioned(
+            child: Image.network(
+              "https://static.quizur.com/i/b/57c1c26fc0b812.5998420157c1c26fb156c9.51498011.png",
               fit: BoxFit.cover,
               alignment: Alignment.center,
             ),
+          ),
 
-            Positioned(
-              child: Image.network(
-                "https://static.quizur.com/i/b/57c1c26fc0b812.5998420157c1c26fb156c9.51498011.png",
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
+          // SPRITES
+          //Positioned(
+              //top: 0.0,
+              //child:
+              //final pokemon = Pokemon.fromJSON(),
+
+
+        //),
+
+
+        //PRIMEIRO BOTAO
+        Positioned(
+          left: 40.0,
+          bottom: 330.0,
+          height: 60,
+          width: 330,
+          child: RaisedButton(
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(20.0),
+            ),
+            color: Colors.amberAccent,
+            child:
+            Text(
+              "Pokémon 1",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35.0,
+                color: Colors.black,
+              ),
+            ),
+            onPressed: () {
+              ButtonStyle(
+                backgroundColor: Colors.green,
+              );
+            },
+
+          ),
+        ),
+
+        // SEGUNDO BOTAO
+        Positioned(
+          left: 40.0,
+          bottom: 230.0,
+          height: 60,
+          width: 330,
+          child: RaisedButton(
+            color: Colors.amberAccent,
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(20.0),
+            ),
+            onPressed: (){
+
+            },
+            child: Text(
+              "Pokémon 2",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35.0,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ),
+
+        // TERCEIRO BOTAO
+        Positioned(
+          left: 40.0,
+          bottom: 130.0,
+          height: 60,
+          width: 330,
+          child: RaisedButton(
+            color: Colors.amberAccent,
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(20.0),
+            ),
+            onPressed: (){
+
+            },
+            child: Text(
+              "Pokémon 3",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35.0,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ),
+
+        // QUARTO BOTAO
+        Positioned(
+          left: 40.0,
+          bottom: 30.0,
+          height: 60,
+          width: 330,
+          child: RaisedButton(
+            color: Colors.amberAccent,
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(20.0),
+            ),
+            onPressed: (){
+
+            },
+            child: Text(
+              "Pokémon 4",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35.0,
+                color: Colors.black,
               ),
             ),
 
-            Positioned(
-              top: 0.0,
-              child:
-              var pokemon = Pokemon.getName,
-
-              ),
-
-
-            //PRIMEIRO BOTAO
-            Positioned(
-              left: 40.0,
-              bottom: 330.0,
-              height: 60,
-              width: 330,
-              child: ElevatedButton(
-                onPressed: null,
-                child: Text(
-                  "Pokémon 1",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35.0,
-                    color: Colors.black,
-                  ),
-                ),
-
-              ),
-            ),
-
-            // SEGUNDO BOTAO
-            Positioned(
-              left: 40.0,
-              bottom: 230.0,
-              height: 60,
-              width: 330,
-              child: ElevatedButton(
-                onPressed: null,
-                child: Text(
-                  "Pokémon 2",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35.0,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-
-            // TERCEIRO BOTAO
-            Positioned(
-              left: 40.0,
-              bottom: 130.0,
-              height: 60,
-              width: 330,
-              child: ElevatedButton(
-                onPressed: null,
-                child: Text(
-                  "Pokémon 3",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35.0,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-
-            // QUARTO BOTAO
-            Positioned(
-              left: 40.0,
-              bottom: 30.0,
-              height: 60,
-              width: 330,
-              child: ElevatedButton(
-                onPressed: null,
-                child: Text(
-                  "Pokémon 4",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35.0,
-                    color: Colors.black,
-                  ),
-                ),
-
-              ),
-            ),
-          ]),
-        ));
+          ),
+        ),
+        ]),)
+    );
   }
 }
