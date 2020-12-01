@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Tela3 extends StatelessWidget {
+class Tela4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,20 +19,20 @@ class Tela3 extends StatelessWidget {
         ),
         body: SingleChildScrollView(
             child: Stack(children: [
-          Image.network(
-            "https://i.imgur.com/i6v5dEg.png",
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-          ),
-          Positioned(
-            bottom: 330,
-              left: 60,
-              child: Text('Parabéns!',
-                  style: TextStyle(
-                    fontSize: 70.0,
-                    fontFamily: "Pokemon",
-                    color: Colors.black,
-                  ))),
-        ])));
+              Image.network(
+                "https://i.imgur.com/i6v5dEg.png",
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+              ),
+              Positioned(
+                  bottom: 330,
+                  left: 60,
+                  child: Text('Tente novamente...',
+                      style: TextStyle(
+                        fontSize: 70.0,
+                        fontFamily: "Pokemon",
+                        color: Colors.black,
+                      ))),
+            ])));
   }
 }
