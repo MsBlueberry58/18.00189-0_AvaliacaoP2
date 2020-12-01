@@ -15,9 +15,9 @@ class Tela1 extends StatelessWidget {
 
   Future FetchPoke()  async {
     var requisicao =
-        NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(900)}");
+        NetworkHelper(url: "https://pokeapi.co/api/v2/pokemon-form/${random.nextInt(895)}");
      poke_t = Pokemon_Obj.fromJson(await requisicao.getData());
-    //Image.network(await pokemon_nome.sprites);
+
   }
 
   @override
