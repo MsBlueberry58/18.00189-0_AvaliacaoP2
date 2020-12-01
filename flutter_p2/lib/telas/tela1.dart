@@ -11,7 +11,6 @@ class Tela1 extends StatelessWidget {
   Random random = new Random();
   Pokemon_Obj poke_t = new Pokemon_Obj();
 
-  //int randomNumber = random.nextInt(100);
 
   Future FetchPoke()  async {
     var requisicao =

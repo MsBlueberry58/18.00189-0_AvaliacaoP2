@@ -3,32 +3,26 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_p2/models/pokemon.dart';
+import 'package:flutter_p2/telas/tela1.dart';
 import 'package:flutter_p2/utilities/network_helper.dart';
 
 class Tela2 extends StatefulWidget {
-
   final Pokemon_Obj poke;
 
   const Tela2({Key key, @required this.poke}) : super(key: key);
 
   @override
   _Tela2State createState() => _Tela2State();
+
+
 }
+
 
 
 class _Tela2State extends State<Tela2> {
 
-  Random random = new Random();
-
-  //ListaPoke(){
-    //var Pokemon_Obj poke_rand;
-
-    //int id_random =
-
-    //return id_random;
-  //}
-
   bool hasbeenPressed = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +58,7 @@ class _Tela2State extends State<Tela2> {
 
             Positioned(
               left: 20.0,
-              top: 120.0,
+              top: 110.0,
               child: Image.network(
                 widget.poke.sprites.frontDefault,
                 fit: BoxFit.cover,
@@ -92,6 +86,10 @@ class _Tela2State extends State<Tela2> {
                   ),
                 ),
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tela1()),
+                  );
                   setState(() {
                     hasbeenPressed = !hasbeenPressed;
                   });
@@ -105,7 +103,10 @@ class _Tela2State extends State<Tela2> {
               bottom: 230.0,
               height: 60,
               width: 330,
-              child: RaisedButton(
+              child:
+              RaisedButton(
+
+
                 color: hasbeenPressed ? Colors.redAccent : Colors.amberAccent,
                 shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(20.0),
@@ -116,7 +117,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "poke_erro",
+                  "lista_rand[0].name",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
@@ -143,7 +144,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "poke_erro.name",
+                  "lista_rand[1].name",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
@@ -170,7 +171,7 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 child: Text(
-                  "poke_erro.name",
+                  "lista_rand[2].name",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
