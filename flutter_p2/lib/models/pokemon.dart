@@ -1,4 +1,4 @@
-class pokemon {
+class Pokemon {
   List<Abilities> abilities;
   int baseExperience;
   List<Forms> forms;
@@ -17,7 +17,7 @@ class pokemon {
   List<Types> types;
   int weight;
 
-  pokemon(
+  Pokemon(
       {this.abilities,
         this.baseExperience,
         this.forms,
@@ -36,7 +36,7 @@ class pokemon {
         this.types,
         this.weight});
 
-  pokemon.fromJson(Map<String, dynamic> json) {
+  Pokemon.fromJson(Map<String, dynamic> json) {
     if (json['abilities'] != null) {
       abilities = new List<Abilities>();
       json['abilities'].forEach((v) {
@@ -313,13 +313,13 @@ class VersionGroupDetails {
 
 class Sprites {
   String backDefault;
-  Null backFemale;
+  String backFemale;
   String backShiny;
-  Null backShinyFemale;
+  String backShinyFemale;
   String frontDefault;
-  Null frontFemale;
+  String frontFemale;
   String frontShiny;
-  Null frontShinyFemale;
+  String frontShinyFemale;
   Other other;
   Versions versions;
 
@@ -704,13 +704,13 @@ class GenerationIv {
 
 class DiamondPearl {
   String backDefault;
-  Null backFemale;
+  String backFemale;
   String backShiny;
-  Null backShinyFemale;
+  String backShinyFemale;
   String frontDefault;
-  Null frontFemale;
+  String frontFemale;
   String frontShiny;
-  Null frontShinyFemale;
+  String frontShinyFemale;
 
   DiamondPearl(
       {this.backDefault,
@@ -770,13 +770,13 @@ class GenerationV {
 class BlackWhite {
   DiamondPearl animated;
   String backDefault;
-  Null backFemale;
+  String backFemale;
   String backShiny;
-  Null backShinyFemale;
+  String backShinyFemale;
   String frontDefault;
-  Null frontFemale;
+  String frontFemale;
   String frontShiny;
-  Null frontShinyFemale;
+  String frontShinyFemale;
 
   BlackWhite(
       {this.animated,
@@ -849,9 +849,9 @@ class GenerationVi {
 
 class OmegarubyAlphasapphire {
   String frontDefault;
-  Null frontFemale;
+  String frontFemale;
   String frontShiny;
-  Null frontShinyFemale;
+  String frontShinyFemale;
 
   OmegarubyAlphasapphire(
       {this.frontDefault,
