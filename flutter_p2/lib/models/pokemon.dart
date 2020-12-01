@@ -1,4 +1,5 @@
 
+// Classe criada a partir da pokeapi
 
 class Pokemon_Obj {
   int _id;

@@ -3,10 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_p2/telas/tela1.dart';
 
+
+// Executa o aplicativo
 void main() {
   runApp(MyApp());
 }
 
+
+// Aplicativo em si
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
